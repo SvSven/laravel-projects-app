@@ -2,14 +2,16 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="columns">
+        <div class="column">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">
+                    <h3 class="card-header-title">Dashboard</h3>
+                </div>
 
-                <div class="card-body">
+                <div class="card-content">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="notification is-danger" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif

@@ -37,8 +37,8 @@
 
                 <div id="main-menu" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" href="{{ route('home') }}">
-                            Home
+                        <a class="navbar-item" href="{{ route('dashboard') }}">
+                            Dashboard
                         </a>
                     </div>
 
@@ -77,7 +77,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 section">
             @yield('content')
         </main>
     </div>

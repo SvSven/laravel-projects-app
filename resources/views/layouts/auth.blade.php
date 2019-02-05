@@ -37,8 +37,8 @@
 
                 <div id="main-menu" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" href="{{ route('home') }}">
-                            Home
+                        <a class="navbar-item" href="{{ route('dashboard') }}">
+                            Dashboard
                         </a>
                     </div>
 
