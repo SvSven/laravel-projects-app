@@ -40,6 +40,12 @@
                         <a class="navbar-item" href="{{ route('dashboard') }}">
                             Dashboard
                         </a>
+
+                        @if(Route::has('projects.index'))
+                            <a href="{{ route('projects.index') }}" class="navbar-item">
+                                Projects
+                            </a>
+                        @endif
                     </div>
 
                     <div class="navbar-end">
