@@ -15,7 +15,7 @@
                 @else
 
                     @foreach($projects as $project)
-                        <a class="panel-block">
+                        <a class="panel-block" href="{{ $project->url }}">
                             {{ $project->title }}
                         </a>
                     @endforeach

@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/projects', 'ProjectsController@index')->name('projects.index');
+Route::get('/projects/{project}/{slug}', 'ProjectsController@show')->name('projects.show');
