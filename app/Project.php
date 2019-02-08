@@ -9,6 +9,8 @@ class Project extends Model
 {
     use Sluggable;
 
+    protected $fillable = ['title', 'description'];
+
     protected $appends = ['url'];
 
     public function getRouteKeyName()
