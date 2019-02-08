@@ -3,19 +3,30 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Project extends Model
 {
+    use Sluggable;
 
-    protected $appends = ['slug', 'url'];
+    protected $appends = ['url'];
 
-    public function getSlugAttribute()
+    public function getRouteKeyName()
     {
-        return str_slug($this->title);
+        return 'slug';
     }
 
     public function getUrlAttribute()
     {
-        return route('projects.show', ['id' => $this->id, 'slug' => $this->slug]);
+        return route('projects.show', [$this->slug]);
+    }
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }
