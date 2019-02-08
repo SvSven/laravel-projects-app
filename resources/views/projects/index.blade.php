@@ -22,6 +22,7 @@
 
                 @endif
             </div>
+            <a href="{{ route('projects.create') }}" class="button is-link">Create new project</a>
         </div>
     </div>
 </div>

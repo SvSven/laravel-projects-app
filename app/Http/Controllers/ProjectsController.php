@@ -24,7 +24,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.create');
     }
 
     /**
@@ -35,7 +35,14 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|min:3|max:255',
+            'description' => 'required|min:3|max:800'
+        ]);
+
+        $project = Project::create($request->all());
+
+        return redirect($project->url);
     }
 
     /**
