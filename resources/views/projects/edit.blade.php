@@ -21,7 +21,8 @@
                                     name="title"
                                     class="input {{ $errors->has('title') ? 'is-danger' : '' }}"
                                     type="text"
-                                    value="{{ $project->title }}">
+                                    value="{{ $project->title }}"
+                                    required>
                             </div>
                         </div>
 
