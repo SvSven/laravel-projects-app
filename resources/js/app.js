@@ -30,3 +30,19 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+document.querySelector('.open-modal').addEventListener('click', function() {
+    const modal = document.getElementById(this.dataset.targetModal);
+    const html = document.querySelector('html');
+
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    const closeOptions = modal.querySelectorAll('.modal-background, .close-modal');
+    for(let i = 0; i < closeOptions.length; i++) {
+        closeOptions[i].addEventListener('click', function(){
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+    }
+});

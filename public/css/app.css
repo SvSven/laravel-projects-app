@@ -1,5 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.modal-card.is-centered {
+  text-align: center;
+}
+
+.modal-card.is-centered .modal-card-foot {
+  display: flex;
+  justify-content: center;
+}
+
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 
 @-webkit-keyframes spinAround {

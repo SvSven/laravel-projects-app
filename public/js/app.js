@@ -12537,6 +12537,20 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+document.querySelector('.open-modal').addEventListener('click', function () {
+  var modal = document.getElementById(this.dataset.targetModal);
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+  var closeOptions = modal.querySelectorAll('.modal-background, .close-modal');
+
+  for (var i = 0; i < closeOptions.length; i++) {
+    closeOptions[i].addEventListener('click', function () {
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  }
+});
 
 /***/ }),
 
